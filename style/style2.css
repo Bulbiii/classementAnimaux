@@ -1,6 +1,9 @@
-h1{
-    text-align: center;
-}
+
 body{
     background-color: red;
+}
+
+h1{
+    color : navy;
+    text-align: center;
 }
