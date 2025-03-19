@@ -1,0 +1,128 @@
+body{
+    display : flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    align-items: center;
+
+    height : 100vh;
+}
+
+
+/*
+------------------------------------------------------
+----------------------- Header -----------------------
+------------------------------------------------------
+*/
+
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header>h1{
+    padding : 10px 10vw;
+
+    border : 1px solid grey;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.474);
+}
+
+
+/*
+------------------------------------------------------
+------------------------ Main ------------------------
+------------------------------------------------------
+*/
+
+article{
+    display: flex;
+    flex-direction: column;
+
+    width: min(50vw, 50vh);
+    height : 60vh;
+
+    padding : 3vh 3vw;
+
+    align-items: center;
+    justify-content: space-around;
+
+    border : 1px solid grey;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.474);
+}
+
+#mainDivImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: min(30vw, 30vh);
+    width: min(30vw, 30vh);
+
+    padding : min(3vw, 3vh);
+
+    border: 1px solid grey;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.474);
+}
+
+#mainDivImage>img{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-height : 100%;
+
+    filter : blur(5px);
+}
+
+#mainButtonsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    width : 90%;
+    height : 15vh;
+    max-height : 75px;
+
+    padding : 2vh 2vw;
+
+    border: 1px solid grey;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.474);
+}
+
+#mainButtonsContainer>button{
+    width : 40%;
+    height : auto;
+    padding : 0;
+    margin : 0.5vh 0;
+}
+
+/*
+------------------------------------------------------
+----------------------- Footer -----------------------
+------------------------------------------------------
+*/
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+
+    padding : 0 2vw;
+
+    width : 90%;
+
+    border : 1px solid grey;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.474);
+}
