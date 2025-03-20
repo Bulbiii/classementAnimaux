@@ -150,17 +150,50 @@ footer{
 
     border: 2px solid rgb(162, 162, 162);
     border-radius: 10px;
+
+    overflow: hidden;
 }
 
 #timerInnerBar{
-    height : 90%;
+position: relative;
+    background-color: #2f5e42;
 
-    background: linear-gradient(#EF9651, 40%, #EC5228);
+    z-index: 10;
 
     border: 0;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
+
+#particleOverlay{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: linear-gradient(#EF9651, 40%, #EC5228);
+}
+
+@keyframes growth{
+    from {scale: 1;}
+    to {scale: 1.4;}
+}
+
+.particle{
+    position: absolute;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    animation-name: growth;
+    animation-duration: 3s;
+}
 
 #score{
     display: flex;

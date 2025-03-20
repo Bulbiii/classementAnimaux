@@ -18,7 +18,7 @@ function start_timer(){
     let animalImage = document.querySelector("#mainDivImage img");
     
     let interval = setInterval(_ => {
-        timerInnerBar.style.height = timerPercentage + "%";
+        timerInnerBar.style.height = (100 - timerPercentage) + "%";
         animalImage.style.filter = "blur(" + (10 - timerPercentage / 10) + "px)";
 
         timerPercentage += 0.1;
@@ -27,4 +27,9 @@ function start_timer(){
            clearInterval(interval); 
         }
     }, 10);
+}
+
+
+function rand(max){
+    return Math.floor(Math.random() * max);
 }
