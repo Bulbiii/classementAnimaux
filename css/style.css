@@ -6,6 +6,17 @@ body{
     align-items: center;
 
     height : 100vh;
+
+    padding: 0;
+    margin: 0;
+
+    background : #3F7D58;
+}
+
+body>*{
+    background-color: #EFEFEF;
+
+    box-shadow: 3px 3px 3px #284d37;
 }
 
 
@@ -19,17 +30,12 @@ body{
 header{
     display: flex;
     justify-content: center;
-}
 
-header>h1{
-    padding : 10px 10vw;
+    padding : 0 10vw;
 
     border : 1px solid grey;
     border-radius: 10px;
-
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.474);
 }
-
 
 /*
 ------------------------------------------------------
@@ -51,8 +57,10 @@ article{
 
     border : 1px solid grey;
     border-radius: 10px;
+}
 
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.474);
+article>*{
+    background : linear-gradient(to top left, #EC5228, 50%, #EF9651);
 }
 
 #mainDivImage{
@@ -123,6 +131,100 @@ footer{
 
     border : 1px solid grey;
     border-radius: 10px;
+}
 
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.474);
+
+/*
+------------------------------------------------------
+------------------------ Misc ------------------------
+------------------------------------------------------
+*/
+
+#timerOuterBar{
+    position: absolute;
+    right: 10vw;
+    top : 27vh;
+
+    width : 10px;
+    height : 50vh;
+
+    border: 2px solid rgb(162, 162, 162);
+    border-radius: 10px;
+}
+
+#timerInnerBar{
+    height : 90%;
+
+    background: linear-gradient(#EF9651, 40%, #EC5228);
+
+    border: 0;
+    border-radius: 10px;
+}
+
+
+#score{
+    display: flex;
+
+    position: absolute;
+    top: 2.8vh;
+    right: 6vw;
+
+    padding : 1vh 1vw;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    color : white;
+    background: linear-gradient(to top left, #EC5228, 50%, #EF9651);
+
+    border-radius: 15px;
+}
+
+#score>p{
+    padding: 0.5vw;
+    margin: 0;
+}
+
+#restart{
+    position: absolute;
+    top : 2.8vh;
+    left : 7vw;
+
+    width: min(8vw, 8vh);
+    height: min(8vw, 8vh);
+
+    padding : 2px;
+
+    background: linear-gradient(#EF9651, 40%, #EC5228);
+
+    border: 0;
+    border-radius: 50%;
+
+    box-shadow: 3px 3px 3px #284d37;
+
+    filter: brightness(1);
+    transition: all 0.2s;
+}
+
+#restart:hover{
+    box-shadow: 3px 3px 6px #122319;
+
+    filter: brightness(1.2);
+}
+
+#restart:active{
+    box-shadow: 1px 1px 1px #284d37aa;
+    filter: brightness(0.9);
+}
+
+#restartImg{
+    width: 100%;
+
+    rotate: 0deg;
+
+    transition: all 0.5s;
+}
+
+#restartImg:hover{
+    rotate: 360deg;
 }

@@ -27,5 +27,9 @@ function create_buttons_container(container){
 }
 
 function selectedChosenAnimal(){
-    console.log(this.innerHTML);
+    let animal = this.innerHTML;
+
+    if (animal = "chien"){
+        update_score();
+    }
 }

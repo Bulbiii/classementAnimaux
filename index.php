@@ -7,9 +7,11 @@
 </head>
 <link rel="stylesheet" href="css/style.css">
 
+<script src="js/lib.js"></script>
 <script src="js/lib_vue.js"></script>
 <script src="js/header_vue.js"></script>
 <script src="js/main_vue.js"></script>
+<script src="js/misc_vue.js"></script>
 <script src="js/footer_vue.js"></script>
 <script src="js/index_vue.js"></script>
 
