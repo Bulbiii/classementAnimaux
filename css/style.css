@@ -14,7 +14,7 @@ body{
 }
 
 body>*{
-    background-color: #EFEFEF;
+    background-color: #efefef;
 
     box-shadow: 3px 3px 3px #284d37;
 }
@@ -148,7 +148,7 @@ footer{
     width : 10px;
     height : 50vh;
 
-    border: 2px solid rgb(162, 162, 162);
+    border: 2px solid rgba(162, 162, 162, 0.714);
     border-radius: 10px;
 
     overflow: hidden;
@@ -197,10 +197,13 @@ position: relative;
 
 #score{
     display: flex;
+    justify-content: center;
 
     position: absolute;
     top: 2.8vh;
-    right: 6vw;
+    right: 2vw;
+
+    width: 15vw;
 
     padding : 1vh 1vw;
 
@@ -241,13 +244,15 @@ position: relative;
 
 #restart:hover{
     box-shadow: 3px 3px 6px #122319;
-
+    
     filter: brightness(1.2);
+    transform: scale(1.01);
 }
 
 #restart:active{
     box-shadow: 1px 1px 1px #284d37aa;
-    filter: brightness(0.9);
+    filter: brightness(1);
+    transform: scale(1);
 }
 
 #restartImg{

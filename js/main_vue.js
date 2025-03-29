@@ -4,6 +4,11 @@ function create_main_vue(container){
     create_image_blur_container(main);
 
     create_buttons_container(main);
+
+    axios.get("/json/json.php?table=animaux&type=byId&id=15").then(response => {
+        console.log(toto, response);
+        
+    })
 }
 
 function create_image_blur_container(container){

@@ -1,7 +1,7 @@
 <?php
 
 function selectOptions($con,$id){
-    $result = mysqli_query($con,"SELECT choix1, choix2, choix3, choix4 from animeaux WHERE id=$id");
+    $result = mysqli_query($con,"SELECT choix1, choix2, choix3, choix4 from animaux WHERE id=$id");
     
     $tab=[] ; 
 	while($row=mysqli_fetch_assoc($result)){
@@ -11,7 +11,7 @@ function selectOptions($con,$id){
 }
 
 function selectSolutions($con,$id){
-    $result = mysqli_query($con,"SELECT solution from animeaux WHERE id=$id");
+    $result = mysqli_query($con,"SELECT solution from animaux WHERE id=$id");
     
     $tab=[] ; 
 	while($row=mysqli_fetch_assoc($result)){
@@ -21,7 +21,7 @@ function selectSolutions($con,$id){
 }
 
 function selectPhoto($con,$id){
-    $result = mysqli_query($con,"SELECT photo from animeaux WHERE id=$id");
+    $result = mysqli_query($con,"SELECT photo from animaux WHERE id=$id");
     
     $tab=[] ; 
 	while($row=mysqli_fetch_assoc($result)){
@@ -31,7 +31,7 @@ function selectPhoto($con,$id){
 }
 
 function selectDescr($con,$id){
-    $result = mysqli_query($con,"SELECT description from animeaux WHERE id=$id");
+    $result = mysqli_query($con,"SELECT description from animaux WHERE id=$id");
     
     $tab=[] ; 
 	while($row=mysqli_fetch_assoc($result)){

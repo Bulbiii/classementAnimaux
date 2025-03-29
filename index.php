@@ -7,6 +7,7 @@
 </head>
 <link rel="stylesheet" href="css/style.css">
 
+<script src="js/axios.min.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/lib_vue.js"></script>
 <script src="js/header_vue.js"></script>

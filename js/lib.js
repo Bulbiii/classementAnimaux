@@ -4,7 +4,13 @@ function restart_score() {
     let scoreContainer = document.querySelector("#scoreValue");
     
     scoreContainer.innerHTML = "0";
+
+    oldTimer = timerPercentage;
     timerPercentage = 0;
+
+    if (oldTimer >= 100){   
+        start_timer();
+    }
 }
 
 function update_score(){

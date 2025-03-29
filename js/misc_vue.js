@@ -67,9 +67,9 @@ function add_score_vue(container){
     create_element("p", score, "scoreUnit", "pts");
 }
 
-// ----------------------------------------
-// ---------------- switch ----------------
-// ----------------------------------------
+// ---------------------------------------
+// --------------- restart ---------------
+// ---------------------------------------
 
 function add_restart_vue(container){
     let restart = create_element("button", container, "restart");

@@ -7,7 +7,7 @@ include "connect.php";
 include "crud.php"; 
 
 // Test de la fonction selectOptions()
-$id_test = 31; 
+$id_test = 15; 
 $resultat = selectOptions($con, $id_test);
 $res2 = selectPhoto($con, $id_test);
 $res3 = selectSolutions($con, $id_test);
