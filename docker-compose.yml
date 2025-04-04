@@ -1,0 +1,25 @@
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      - MARIADB_ROOT_PASSWORD=toto
+      - MARIADB_USER=lorax
+      - MARIADB_PASSWORD=minou
+      - MARIADB_DATABASE=test
+    ports:
+      - 3307:3306
+  monapache:
+    image: php:8.3-apache
+    volumes:
+      - /home/julie/USMB/S4/INFO411/htdocs:/var/www/html
+    ports:
+      - 80:80
+    container_name: c_td_apache
+  monubuntu:
+    image: trognonj/mon_ubuntu
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      - PMA_HOST=mariadb
+    ports:
+      - 8080:80
