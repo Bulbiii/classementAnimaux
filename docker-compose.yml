@@ -2,24 +2,30 @@ services:
   mariadb:
     image: mariadb
     environment:
-      - MARIADB_ROOT_PASSWORD=toto
-      - MARIADB_USER=lorax
-      - MARIADB_PASSWORD=minou
-      - MARIADB_DATABASE=test
+      - MARIADB_ROOT_PASSWORD=${ROOT_PASSWORD_DB}
+      - MARIADB_USER=${LOGIN_DB}
+      - MARIADB_PASSWORD=${PASSWORD_DB}
+      - MARIADB_DATABASE=${NAME_DB}
     ports:
       - 3307:3306
+    volumes:
+      - /home/julie/USMB/S4/INFO411/htdocs/sql:/docker-entrypoint-initdb.d
+      - /home/julie/USMB/S4/INFO411/htdocs/bd_data/:/var/lib/mysql/mariadb
+    container_name: c_mariadb
   monapache:
-    image: php:8.3-apache
+    image: jtrognon/monapache
     volumes:
       - /home/julie/USMB/S4/INFO411/htdocs:/var/www/html
     ports:
       - 80:80
-    container_name: c_td_apache
+    container_name: c_monapache
   monubuntu:
-    image: trognonj/mon_ubuntu
+    image: jtrognon/monubuntu
+    container_name: c_monubuntu
   phpmyadmin:
     image: phpmyadmin
     environment:
       - PMA_HOST=mariadb
     ports:
       - 8080:80
+    container_name: c_monphpmyadmin

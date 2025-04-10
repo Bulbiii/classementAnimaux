@@ -1,6 +1,8 @@
 <?php
-define('SERVEUR_BD', 'htdocs-mariadb-1:3306');
-define('LOGIN_BD', 'lorax');
-define('PASS_BD', 'minou');
-define('NOM_BD', 'test');
+$env = parse_ini_file(".env");
+
+define('SERVEUR_BD', $env["SERVER_DB"]);
+define('LOGIN_BD', $env["LOGIN_DB"]);
+define('PASS_BD', $env["PASSWORD_DB"]);
+define('NOM_BD', $env["NAME_DB"]);
 ?>
