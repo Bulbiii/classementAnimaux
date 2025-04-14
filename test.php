@@ -13,7 +13,7 @@ $res2 = selectPhoto($con, $id_test);
 $res3 = selectSolutions($con, $id_test);
 $res4 = selectDescr($con, $id_test);
 
-echo "totototo";
+echo "tototototo";
 
 echo "<pre>";
 print_r($resultat); 
