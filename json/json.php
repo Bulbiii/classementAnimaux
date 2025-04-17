@@ -23,6 +23,13 @@ if(isset($_GET['table']) && isset($_GET['type'])){
                 "description" => selectDescr($con, $id)
             ];
             $recupere = true;
+        } else if ($type == "all" && isset($_GET["filter"])) {
+            $filter = $_GET["filter"];
+            
+            if ($filter == "idOnly") {
+                $donnees = selectAllId($con);
+                $recupere = true;
+            }
         }
     }
 }
@@ -38,11 +45,11 @@ if($recupere){
     header('Content-Type: application/json; charset=utf-8');
     
     // Ecrit les donnees au format JSON
-    echo"${donnees_str}";
+    echo"{$donnees_str}";
 }else{
     $donnees_str = json_encode("erreur");//("erreur");
     header('Content-Type: application/json; charset=utf-8');
-    echo"${donnees_str}";
+    echo"{$donnees_str}";
 }
 
 include "../include/disconnect.php";

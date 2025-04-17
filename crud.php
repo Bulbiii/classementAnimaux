@@ -40,6 +40,14 @@ function selectDescr($con,$id){
 	return $tab;
 }
 
+function selectAllId($con){
+	$result = mysqli_query($con, "SELECT id FROM animaux");
 
+	$tab=[];
+	while ($row=mysqli_fetch_assoc($result)){
+		$tab[]=$row;
+	}
+	return $tab;
+}
 
 ?>

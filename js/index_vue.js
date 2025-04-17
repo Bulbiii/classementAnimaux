@@ -6,7 +6,7 @@ function create_index_vue(){
 
     create_main_vue(container);
 
-    create_misc_vue(container);
+    // create_misc_vue(container);
 
     create_footer_vue(container);
 }

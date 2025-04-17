@@ -5,18 +5,22 @@ function restart_score() {
     
     scoreContainer.innerHTML = "0";
 
-    oldTimer = timerPercentage;
-    timerPercentage = 0;
-
-    if (oldTimer >= 100){   
-        start_timer();
-    }
+    restart_timer()
 }
 
 function update_score(){
     let scoreContainer = document.querySelector("#scoreValue");
 
     scoreContainer.innerHTML = Math.round(Number(scoreContainer.innerHTML) + (100 - timerPercentage));
+}
+
+function restart_timer(){
+    oldTimer = timerPercentage;
+    timerPercentage = 0;
+
+    if (oldTimer >= 100){   
+        start_timer();
+    }
 }
 
 function start_timer(){
@@ -39,3 +43,14 @@ function start_timer(){
 function rand(max){
     return Math.floor(Math.random() * max);
 }
+
+
+
+function getAllId(){
+    let idList = axios.get("/json/json.php?table=animaux&type=all&filter=idOnly").then(response => {
+        return response.data;
+    })
+
+    return idList;
+}
+
