@@ -20,9 +20,5 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
           "cd ${{ secrets.WORKDIR }} && \
-          rm .env && \
-          rm docker_compose.yml && \
-          sudo git rm .env && \
-          sudo git rm docker_compose.yml && \
           sudo git config pull.rebase false && \
           sudo git pull"
