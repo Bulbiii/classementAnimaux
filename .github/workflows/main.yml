@@ -20,5 +20,8 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
           "cd ${{ secrets.WORKDIR }} && \
+          sudo git add * && \
+          sudo git commit -m "toto" && \
+          sudo git stash && \
           sudo git config pull.rebase false && \
           sudo git pull"
