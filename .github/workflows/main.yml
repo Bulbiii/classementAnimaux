@@ -20,10 +20,4 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
           "cd ${{ secrets.WORKDIR }} && \
-          sudo rm /home/debian/var/www/animaux.info411.site/.env && \
-          sudo git rm .env && \
-          sudo git add * && \
-          sudo git commit -m "toto" && \
-          sudo git stash && \
-          sudo git config pull.rebase false && \
           sudo git pull"
