@@ -1,4 +1,4 @@
-ervices:
+services:
   mariadb:
     image: mariadb
     environment:
