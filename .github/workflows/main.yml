@@ -20,5 +20,5 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
           "cd ${{ secrets.WORKDIR }} && \
-          git pull -f &&
+          git pull && \
           ./scripts/deploy.sh"

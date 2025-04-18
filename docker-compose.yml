@@ -9,15 +9,15 @@ services:
     ports:
       - 3307:3306
     volumes:
-      - /home/julie/USMB/S4/INFO411/htdocs/sql:/docker-entrypoint-initdb.d
-      - /home/julie/USMB/S4/INFO411/htdocs/bd_data/:/var/lib/mysql/mariadb
+      - ./sql:/docker-entrypoint-initdb.d
+      - ./bd_data:/var/lib/mysql/mariadb
     container_name: c_mariadb
   monapache:
     image: jtrognon/monapache
     volumes:
-      - /home/julie/USMB/S4/INFO411/htdocs:/var/www/html
+      - ./:/var/www/html
     ports:
-      - 80:80
+      - 8082:80
     container_name: c_monapache
   monubuntu:
     image: jtrognon/monubuntu
@@ -27,5 +27,5 @@ services:
     environment:
       - PMA_HOST=mariadb
     ports:
-      - 8080:80
+      - 8083:80
     container_name: c_monphpmyadmin
