@@ -1,5 +1,5 @@
 function create_main_vue(container){
-    console.log("to");
+    console.log("toto");
     
     
     let main = create_element("article", container, "mainArticle");
